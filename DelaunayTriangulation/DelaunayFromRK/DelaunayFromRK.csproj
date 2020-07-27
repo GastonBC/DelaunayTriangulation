@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA312306-6C26-4E13-A4C1-E23F68700471}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DelaunayTriangulation</RootNamespace>
-    <AssemblyName>DelaunayTriangulation</AssemblyName>
+    <ProjectGuid>{9F64C94C-78D2-4199-AAA9-6C74AF105D28}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DelaunayFromRK</RootNamespace>
+    <AssemblyName>DelaunayFromRK</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,23 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Habrador\Delaunay.cs" />
-    <Compile Include="Habrador\HalfEdge.cs" />
-    <Compile Include="Habrador\IncrementalTriangulation.cs" />
-    <Compile Include="Habrador\Intersection.cs" />
-    <Compile Include="Habrador\Plane.cs" />
-    <Compile Include="RK\Delaunay.cs" />
-    <Compile Include="RK\Edge.cs" />
-    <Compile Include="RK\Point.cs" />
-    <Compile Include="RK\Program.cs" />
-    <Compile Include="RK\Triangle.cs" />
-    <Compile Include="RK\Voronoi.cs" />
-    <Compile Include="Habrador\Triangle.cs" />
-    <Compile Include="Habrador\Vector2.cs" />
-    <Compile Include="Habrador\Vector3.cs" />
-    <Compile Include="Habrador\Vertex.cs" />
-    <Compile Include="Habrador\Edge.cs" />
+    <Compile Include="Delaunay.cs" />
+    <Compile Include="Edge.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Triangle.cs" />
+    <Compile Include="Voronoi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
