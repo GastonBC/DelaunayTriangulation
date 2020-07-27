@@ -15,18 +15,11 @@ namespace DelaunayVoronoi
             MaxX = maxX;
             MaxY = maxY;
 
-            // TODO make more beautiful
-            Point point0 = new Point(0, 0);
-            Point point1 = new Point(0, MaxY);
-            Point point2 = new Point(MaxX, MaxY);
-            Point point3 = new Point(MaxX, 0);
-            List<Point> points = new List<Point>() { point0, point1, point2, point3 };
-            Triangle tri1 = new Triangle(point0, point1, point2);
-            Triangle tri2 = new Triangle(point0, point2, point3);
-            border = new List<Triangle>() { tri1, tri2 };
+            List<Point> points = new List<Point>();
+            border = new List<Triangle>();
 
             Random random = new Random();
-            for (int i = 0; i < amount - 4; i++)
+            for (int i = 0; i < amount; i++)
             {
                 double pointX = random.NextDouble() * MaxX;
                 double pointY = random.NextDouble() * MaxY;
